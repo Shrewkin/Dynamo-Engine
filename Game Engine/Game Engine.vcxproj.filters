@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Input functions">
+      <UniqueIdentifier>{172736e1-9264-40e1-8598-2769e332658d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine Backend">
+      <UniqueIdentifier>{d75ce19a-3148-45d3-9ad6-9111ca9a13e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Math functions">
+      <UniqueIdentifier>{67d5f55d-00f3-4543-a1e3-d4f4f7f796ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Matrix functions">
+      <UniqueIdentifier>{d4795bc8-a522-47d6-a25e-ad29d518a671}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Random functions">
+      <UniqueIdentifier>{1e24a215-1e72-4432-93f9-5fbbe4cfa454}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Vector functions">
+      <UniqueIdentifier>{eb20d0d1-83c5-48be-9259-1938c304a49b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DE_engine_math.c">
+      <Filter>Header Files\Math functions</Filter>
+    </ClCompile>
+    <ClCompile Include="DE_engine_input.c">
+      <Filter>Header Files\Input functions</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="global_header.h">
+      <Filter>Header Files\Engine Backend</Filter>
+    </ClInclude>
+    <ClInclude Include="DE_engine_math.h">
+      <Filter>Header Files\Math functions</Filter>
+    </ClInclude>
+    <ClInclude Include="DE_engine_input.h">
+      <Filter>Header Files\Input functions</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

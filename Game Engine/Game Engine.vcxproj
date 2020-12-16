@@ -141,11 +141,15 @@
   <ItemGroup>
     <ClCompile Include="DE_engine_input.c" />
     <ClCompile Include="DE_engine_math.c" />
+    <ClCompile Include="DE_engine_matrix.c" />
+    <ClCompile Include="DE_engine_vector.c" />
     <ClCompile Include="Main.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DE_engine_input.h" />
     <ClInclude Include="DE_engine_math.h" />
+    <ClInclude Include="DE_engine_matrix.h" />
+    <ClInclude Include="DE_engine_vectors.h" />
     <ClInclude Include="global_header.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

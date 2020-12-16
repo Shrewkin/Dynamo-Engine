@@ -36,31 +36,64 @@ DE_Matrix DE_Matrix_Identity(void)
 	return newMat;
 }
 
-//DE_Matrix DE_matrix_from_vector(DE_Vector2 col1, DE_Vector2 col2, DE_Vector2 col3)
-//{
-//	reutrn NULL;
-//}
-//
-//DE_Matrix DE_matrix_scale(DE_Vector2 scale)
-//{
-//	reutrn NULL;
-//}
-//
-//DE_Matrix DE_matrix_translate(DE_Vector2 offset)
-//{
-//	reutrn NULL;
-//}
-//
-//DE_Matrix DE_matrix_rotate(float deg);
-//{
-//
-//	reutrn NULL;
-//}
-//DE_Matrix DE_matrix_rotate_rads(float rad)
-//{
-//
-//	reutrn NULL;
-//}
+DE_Matrix DE_Matrix_From_Vector(DE_Vector2 col1, DE_Vector2 col2, DE_Vector2 col3)
+{
+	DE_Matrix newMat;
+	newMat.f00 = col1.x; newMat.f01 = col2.x; newMat.f02 = col3.x;
+	newMat.f10 = col1.y; newMat.f11 = col2.y; newMat.f12 = col3.y;
+	newMat.f20 = 0.0f;	 newMat.f21 = 0.0f;	  newMat.f22 = 0.0f;
+
+	return newMat;
+}
+
+DE_Matrix DE_Matrix_Scale(DE_Vector2 scale)
+{
+	DE_Matrix scaleMat;
+	// 
+	// k 0
+	// 0 k
+	// 
+	scaleMat.f00 = scale.x; scaleMat.f01 = 0.0f;	scaleMat.f02 = 0.0f;
+	scaleMat.f10 = 0.0f;	scaleMat.f11 = scale.y; scaleMat.f12 = 0.0f;
+	scaleMat.f20 = 0.0f;	scaleMat.f21 = 0.0f;	scaleMat.f22 = 0.0f;
+	return scaleMat;
+}
+
+DE_Matrix DE_Matrix_Translate(DE_Vector2 offset)
+{
+	DE_Matrix transMat;
+
+	transMat.f00 = offset.x; transMat.f01 = offset.x; transMat.f02 = offset.x;
+	transMat.f10 = offset.y; transMat.f11 = offset.y; transMat.f12 = offset.y;
+	transMat.f20 = 0.0f;	 transMat.f21 = 0.0f;	  transMat.f22 = 0.0f;
+
+	return transMat;
+}
+
+DE_Matrix DE_Matrix_Rotate(float deg)
+{
+	DE_Matrix rotMat;
+	if (deg < 0.0f)
+	{
+		rotMat.f00 = cosf(deg); rotMat.f01 = sinf(deg); rotMat.f02 = 0.0f;
+		rotMat.f10 = -sinf(deg); rotMat.f11 = cosf(deg); rotMat.f12 = 0.0f;
+		rotMat.f20 = 0.0f;		 rotMat.f21 = 0.0f;		 rotMat.f22 = 0.0f;
+	}
+	else
+	{
+		rotMat.f00 = cosf(deg); rotMat.f01 = -sinf(deg); rotMat.f02 = 0.0f;
+		rotMat.f10 = sinf(deg); rotMat.f11 = cosf(deg); rotMat.f12 = 0.0f;
+		rotMat.f20 = 0.0f;		 rotMat.f21 = 0.0f;		 rotMat.f22 = 0.0f;
+	}
+
+	return rotMat;
+}
+DE_Matrix DE_Matrix_Rotate_Rads(float rad)
+{
+	float deg = rad * 180.0f / (float)PI;
+
+	return DE_Matrix_Rotate(deg);
+}
 
 DE_Matrix DE_Matrix_Transpose(DE_Matrix original)
 {

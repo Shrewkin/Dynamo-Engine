@@ -35,30 +35,30 @@ int main(void)
 	// distance calculations - 
 	// degree to radians and vice versa -
 	
-	// Vector Math functions
-	// Vector set
-	// Vector zero
-	// Vector negate
-	// Vector add
-	// vector normalize
-	// vector scale
-	// matrix multiply
-	// vector length
-	// vector distance
-	// vector dot
-	// vector cross product
-	// vector angle
+	// Vector Math functions -
+	// Vector set -
+	// Vector zero -
+	// Vector negate -
+	// Vector add -
+	// vector normalize -
+	// vector scale -
+	// matrix multiply -
+	// vector length -
+	// vector distance -
+	// vector dot -
+	// vector cross product -
+	// vector angle -
 
-	// Matrix functions
+	// Matrix functions -
 	// Matrix set -
 	// Matrix identity - 
 	// Matrix scale -
 	// Matrix translate -
-	// Matrix rotate
-	// matrix rotate rads
-	// Matrix transpose
-	// Matrix inverse
-	// matrix multiply
+	// Matrix rotate -
+	// matrix rotate rads -
+	// Matrix transpose -
+	// Matrix inverse -
+	// matrix multiply -
 
 	// Random functions
 	// random bool

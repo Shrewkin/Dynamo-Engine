@@ -75,7 +75,7 @@ DE_Vector2 DE_Vector_MatrixMultiply(DE_Matrix mat, DE_Vector2 vec)
 // Fix Later
 float DE_Vector_Length(DE_Vector2 vec)
 {
-	return fabs(sqrtf(DE_Math_Square_Value(vec.x) + DE_Math_Square_Value(vec.y)));
+	return (float)fabs(sqrtf(DE_Math_Square_Value(vec.x) + DE_Math_Square_Value(vec.y)));
 }
 
 float DE_Vector_Distance(DE_Vector2 a, DE_Vector2 b)
@@ -91,7 +91,7 @@ float DE_Vector_DotProduct(DE_Vector2 a, DE_Vector2 b)
 
 float DE_Vector_Angle(DE_Vector2 a, DE_Vector2 b)
 {
-	return acosf(DE_Vector_DotProduct(a, b) / fabs(DE_Vector_DotProduct(a, b)));
+	return (float)acosf(DE_Vector_DotProduct(a, b) / (float)fabs(DE_Vector_DotProduct(a, b)));
 }
 
 float DE_Vector_CrossProduct(DE_Vector2 a, DE_Vector2 b)
